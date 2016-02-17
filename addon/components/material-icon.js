@@ -1,22 +1,20 @@
 import Ember from 'ember';
 import layout from '../templates/components/material-icon';
 
-export default Ember.Component.extend({
+var PaperIconComponent = Ember.Component.extend({
   layout: layout,
 
   tagName: 'i',
-  classNameBindings: [
-    'iconClass',
-    'sizeClass'
-  ],
+  classNames: ['material-icons'],
 
-  iconClass: Ember.computed('icon', function() {
-    return `zmdi zmdi-${this.get('icon')}`;
-  }),
-
-  sizeClass: Ember.computed('size', function() {
-    if (!this.get('size')) return;
-
-    return `zmdi-hc-${this.get('size')}`;
+  iconClass: Ember.computed('icon', 'positionalIcon', function() {
+    var icon = this.getWithDefault('positionalIcon', this.get('icon'));
+    return icon;
   })
 });
+
+PaperIconComponent.reopenClass({
+  positionalParams: ['positionalIcon']
+});
+
+export default PaperIconComponent;
