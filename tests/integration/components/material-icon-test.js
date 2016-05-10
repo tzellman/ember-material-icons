@@ -6,20 +6,23 @@ moduleForComponent('material-icon', 'Integration | Component | material icon', {
 });
 
 test('it renders', function(assert) {
-  
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
-  this.render(hbs`{{material-icon}}`);
+  var icon = "home";
 
-  assert.equal(this.$().text().trim(), '');
+  this.set('icon', icon);
+
+  this.render(hbs`{{material-icon icon}}`);
+
+  assert.equal(this.$().text().trim(), 'home');
 
   // Template block usage:" + EOL +
   this.render(hbs`
-    {{#material-icon}}
-      template block text
+    {{#material-icon icon}}
     {{/material-icon}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'home');
 });
