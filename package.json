@@ -1,6 +1,6 @@
 {
   "name": "ember-material-icons",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Google Material icons for your ember-cli app",
   "directories": {
     "doc": "doc",
