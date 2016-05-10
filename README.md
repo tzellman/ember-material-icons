@@ -1,26 +1,26 @@
-# Ember-material-icons
+# ember-material-icons
 
-This README outlines the details of collaborating on this Ember addon.
+[![NPM package](https://img.shields.io/npm/v/ember-material-icons.svg)](https://www.npmjs.com/package/ember-material-icons) [![Build Status](https://img.shields.io/travis/ynnoj/ember-material-icons.svg)](https://travis-ci.org/ynnoj/ember-material-icons) [![Ember Observer Score](http://emberobserver.com/badges/ember-material-icons.svg)](http://emberobserver.com/addons/ember-material-icons)
+
+[Google Material] icons for your ember-cli app.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```shell
+ember install ember-material-icons
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Use the component in your templates.
 
-## Running Tests
+```hbs
+{{material-icon "home"}}
+```
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Find all available icons [here].
 
-## Building
 
-* `ember build`
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+[Google Material]: https://design.google.com/
+[here]: https://design.google.com/icons/
