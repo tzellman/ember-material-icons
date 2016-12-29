@@ -7,7 +7,7 @@ var MaterialIconComponent = Component.extend({
 
   tagName: 'i',
   classNames: ['material-icons'],
-  attributeBindings: ['title', 'style', 'alt', 'ariaHiddenAttribute:aria-hidden'],
+  attributeBindings: ['title', 'style', 'alt', 'ariaHiddenAttribute:aria-hidden', 'onclick'],
 
   iconClass: Ember.computed('icon', 'positionalIcon', function () {
     var icon = this.getWithDefault('positionalIcon', this.get('icon'));
